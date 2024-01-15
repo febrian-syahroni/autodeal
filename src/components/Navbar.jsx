@@ -60,8 +60,6 @@ const Navbar = () => {
           >
             <FaUnlockKeyhole />
             <h5>Masuk/Daftar</h5>
-
-
           </button>
         </div>
       </div>
