@@ -8,11 +8,11 @@ export default function EndpointEdit() {
         <Home />
       </Link>
       <p className="text-[#aaaaaa]">/</p>
-      <Link href={"/profil"} className="font-[500] text-[12px] text-[#333333]">
+      <Link href={"/profile"} className="font-[500] text-[12px] text-[#333333]">
         Profil Penjual
       </Link>
       <p className="text-[#aaaaaa]">/</p>
-      <Link href={"/profil"} className="font-[500] text-[12px] text-[#333333]">
+      <Link href={"/profile"} className="font-[500] text-[12px] text-[#333333]">
         ID 12345
       </Link>
       <p className="text-[#aaaaaa]">/</p>
