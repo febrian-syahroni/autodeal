@@ -1,9 +1,10 @@
-import Image from "next/image";
 import Tiktok from "../../../../public/svgs/tiktok";
 import Whatsapp from "../../../../public/svgs/whatsapp";
 import Youtube from "../../../../public/svgs/youtube";
 import Facebook from "../../../../public/svgs/facebook";
 import Instagram from "../../../../public/svgs/instagram";
+
+import Maps from "@/components/Maps";
 
 export default function ContentProfilEdit() {
   return (
@@ -180,9 +181,11 @@ export default function ContentProfilEdit() {
       </div>
       <div className="flex flex-col">
         <h3 className="font-[500] text-[12px] text-[#aaaaaa] mt-[20px] mb-[10px]">
-          Kecamatan
+          Pilih Lokasi
         </h3>
-        <div className="w-[915px] h-[200px] rounded-[8px] bg-gray-300"></div>
+        <div className="w-[915px] h-[200px] rounded-[8px] bg-gray-300">
+          <Maps />
+        </div>
       </div>
       <div className="flex gap-[8px] justify-end mt-[20px]">
         <button className="font-[500] text-[14px] text-[#333333] flex items-center justify-center w-[132px] h-[43px] rounded-[8px] py-[13px] px-[41px] bg-[#ececec]">
