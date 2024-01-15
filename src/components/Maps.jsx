@@ -29,7 +29,7 @@ export default function Maps(){
         <>
             <GoogleMapReact
                 bootstrapURLKeys={{
-                key: "AIzaSyCqNVISSKUXTzSUejfJfljdtAH5UEODA54",
+                    key: AUTODEAL_GMAPS_API_KEY,
                 }}
                 defaultCenter={mapCenter}
                 defaultZoom={18}
