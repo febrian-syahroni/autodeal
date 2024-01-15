@@ -3,6 +3,7 @@ import Tiktok from "../../../../public/svgs/tiktok";
 import Whatsapp from "../../../../public/svgs/whatsapp";
 import Youtube from "../../../../public/svgs/youtube";
 import Facebook from "../../../../public/svgs/facebook";
+import Instagram from "../../../../public/svgs/instagram";
 
 export default function ContentProfilEdit() {
   return (
@@ -78,7 +79,7 @@ export default function ContentProfilEdit() {
           </h3>
           <div className="flex">
             <button className="flex justify-center items-center border-[1px] text-[#aaaaaa] bg-[#e5e5e5] font-[500] text-[14px] w-[61px] h-[44px] rounded-l-[8px]">
-              <Image src={"/icons/Instagram.png"} width={18} height={18} />
+              <Instagram />
             </button>
             <input
               placeholder="contoh: 812345678"

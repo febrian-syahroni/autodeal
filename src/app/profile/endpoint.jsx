@@ -8,7 +8,7 @@ export default function Endpoint() {
         <Home />
       </Link>
       <p className="text-[#aaaaaa]">/</p>
-      <Link href={"/profil"} className="font-[500] text-[12px] text-[#333333]">
+      <Link href={"/profile"} className="font-[500] text-[12px] text-[#333333]">
         Profil
       </Link>
       <p className="text-[#aaaaaa]">/</p>

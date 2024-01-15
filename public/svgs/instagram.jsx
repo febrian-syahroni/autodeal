@@ -1,93 +1,30 @@
 const Instagram = (props) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={40}
-    height={40}
-    fill="none"
-    {...props}>
-    <g filter="url(#a)">
-      <circle cx={32} cy={30} r={20} fill="#fff" />
-      <g clipPath="url(#b)">
-        <path
-          fill="url(#c)"
-          d="M35.75 20h-7.5A6.25 6.25 0 0 0 22 26.25v7.5A6.25 6.25 0 0 0 28.25 40h7.5A6.25 6.25 0 0 0 42 33.75v-7.5A6.25 6.25 0 0 0 35.75 20Zm4.375 13.75a4.38 4.38 0 0 1-4.375 4.375h-7.5a4.38 4.38 0 0 1-4.375-4.375v-7.5a4.38 4.38 0 0 1 4.375-4.375h7.5a4.38 4.38 0 0 1 4.375 4.375v7.5Z"
-        />
-        <path
-          fill="url(#d)"
-          d="M32 25a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.125A3.13 3.13 0 0 1 28.875 30 3.129 3.129 0 0 1 32 26.875 3.129 3.129 0 0 1 35.125 30 3.13 3.13 0 0 1 32 33.125Z"
-        />
-        <path
-          fill="url(#e)"
-          d="M37.375 25.291a.666.666 0 1 0 0-1.333.666.666 0 0 0 0 1.333Z"
-        />
-      </g>
-    </g>
-    <defs>
-      <linearGradient
-        id="c"
-        x1={23.831}
-        x2={40.169}
-        y1={38.169}
-        y2={21.831}
-        gradientUnits="userSpaceOnUse">
-        <stop stopColor="#FFC107" />
-        <stop offset={0.507} stopColor="#F44336" />
-        <stop offset={0.99} stopColor="#9C27B0" />
-      </linearGradient>
-      <linearGradient
-        id="d"
-        x1={28.465}
-        x2={35.535}
-        y1={33.535}
-        y2={26.465}
-        gradientUnits="userSpaceOnUse">
-        <stop stopColor="#FFC107" />
-        <stop offset={0.507} stopColor="#F44336" />
-        <stop offset={0.99} stopColor="#9C27B0" />
-      </linearGradient>
-      <linearGradient
-        id="e"
-        x1={36.904}
-        x2={37.847}
-        y1={25.096}
-        y2={24.154}
-        gradientUnits="userSpaceOnUse">
-        <stop stopColor="#FFC107" />
-        <stop offset={0.507} stopColor="#F44336" />
-        <stop offset={0.99} stopColor="#9C27B0" />
-      </linearGradient>
-      <clipPath id="b">
-        <path fill="#fff" d="M22 20h20v20H22z" />
-      </clipPath>
-      <filter
-        id="a"
-        width={40}
-        height={40}
-        x={0}
-        y={0}
-        colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feColorMatrix
-          in="SourceAlpha"
-          result="hardAlpha"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-        />
-        <feOffset dy={2} />
-        <feGaussianBlur stdDeviation={6} />
-        <feComposite in2="hardAlpha" operator="out" />
-        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
-        <feBlend
-          in2="BackgroundImageFix"
-          result="effect1_dropShadow_305_1746"
-        />
-        <feBlend
-          in="SourceGraphic"
-          in2="effect1_dropShadow_305_1746"
-          result="shape"
-        />
-      </filter>
-    </defs>
-  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" {...props}>
+  <g clip-path="url(#clip0_676_3808)">
+    <path d="M13.75 0H6.25C2.79875 0 0 2.79875 0 6.25V13.75C0 17.2013 2.79875 20 6.25 20H13.75C17.2013 20 20 17.2013 20 13.75V6.25C20 2.79875 17.2013 0 13.75 0ZM18.125 13.75C18.125 16.1625 16.1625 18.125 13.75 18.125H6.25C3.8375 18.125 1.875 16.1625 1.875 13.75V6.25C1.875 3.8375 3.8375 1.875 6.25 1.875H13.75C16.1625 1.875 18.125 3.8375 18.125 6.25V13.75Z" fill="url(#paint0_linear_676_3808)"/>
+    <path d="M10 5C7.23875 5 5 7.23875 5 10C5 12.7612 7.23875 15 10 15C12.7613 15 15 12.7612 15 10C15 7.23875 12.7613 5 10 5ZM10 13.125C8.2775 13.125 6.875 11.7225 6.875 10C6.875 8.27625 8.2775 6.875 10 6.875C11.7225 6.875 13.125 8.27625 13.125 10C13.125 11.7225 11.7225 13.125 10 13.125Z" fill="url(#paint1_linear_676_3808)"/>
+    <path d="M15.3752 5.29108C15.7431 5.29108 16.0414 4.99266 16.0414 4.62455C16.0414 4.25643 15.7431 3.95801 15.3752 3.95801C15.0073 3.95801 14.709 4.25643 14.709 4.62455C14.709 4.99266 15.0073 5.29108 15.3752 5.29108Z" fill="url(#paint2_linear_676_3808)"/>
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear_676_3808" x1="1.83081" y1="18.1693" x2="18.1692" y2="1.83069" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC107"/>
+      <stop offset="0.507" stop-color="#F44336"/>
+      <stop offset="0.99" stop-color="#9C27B0"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_676_3808" x1="6.46456" y1="13.5354" x2="13.5354" y2="6.46456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC107"/>
+      <stop offset="0.507" stop-color="#F44336"/>
+      <stop offset="0.99" stop-color="#9C27B0"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear_676_3808" x1="14.9042" y1="5.09594" x2="15.8467" y2="4.15376" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC107"/>
+      <stop offset="0.507" stop-color="#F44336"/>
+      <stop offset="0.99" stop-color="#9C27B0"/>
+    </linearGradient>
+    <clipPath id="clip0_676_3808">
+      <rect width="20" height="20" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
 );
 export default Instagram;
