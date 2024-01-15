@@ -17,7 +17,7 @@ export default function Maps(){
     const [mapCenter, setMapCenter] = useState({ lat: -6.902203929985474, lng: 107.61863114717433 })
 
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: "AIzaSyCqNVISSKUXTzSUejfJfljdtAH5UEODA54",
+        googleMapsApiKey: process.env.NEXT_PUBLIC_MAPS_KEY,
         libraries: libs,
     });
 
@@ -29,7 +29,7 @@ export default function Maps(){
         <>
             <GoogleMapReact
                 bootstrapURLKeys={{
-                    key: AUTODEAL_GMAPS_API_KEY,
+                    key: process.env.NEXT_PUBLIC_MAPS_KEY,
                 }}
                 defaultCenter={mapCenter}
                 defaultZoom={18}
