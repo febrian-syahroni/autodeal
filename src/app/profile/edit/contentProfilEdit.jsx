@@ -40,7 +40,7 @@ export default function ContentProfilEdit() {
           </h3>
           <div className="flex">
             <button className="flex justify-center items-center border-[1px] text-[#aaaaaa] bg-[#e5e5e5] font-[500] text-[14px] w-[61px] h-[44px] rounded-l-[8px]">
-              +62 ▼
+              +62
             </button>
             <input
               placeholder="contoh: 812345678"
@@ -148,7 +148,7 @@ export default function ContentProfilEdit() {
       <div className="flex gap-[20px]">
         <div className="mt-[40px]">
           <h3 className="font-[500] text-[12px] text-[#aaaaaa] mb-[10px]">
-            Kecamatan
+            Pilih Lokasi
           </h3>
           <div className="flex">
             <input
