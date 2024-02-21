@@ -29,10 +29,18 @@ export default function FooterProfil() {
           <div className="flex ml-[80px] gap-[12px] flex-col text-center">
             <h1 className="font-[600] text-[14px] text-[#333333]">Autodeal</h1>
             <p className="flex gap-[20px] font-[500] text-[12px] text-[#aaaaaa]">
-              <Link href={"/"}>Tentang Kami</Link>
-              <Link href={"/"}>Pusat Bantuan</Link>
-              <Link href={"/"}>Syarat & Ketentuan</Link>
-              <Link href={"/"}>Kebijakan Privasi</Link>
+              <Link className="hover:scale-110 active:scale-100" href={"/"}>
+                Tentang Kami
+              </Link>
+              <Link className="hover:scale-110 active:scale-100" href={"/"}>
+                Pusat Bantuan
+              </Link>
+              <Link className="hover:scale-110 active:scale-100" href={"/"}>
+                Syarat & Ketentuan
+              </Link>
+              <Link className="hover:scale-110 active:scale-100" href={"/"}>
+                Kebijakan Privasi
+              </Link>
             </p>
           </div>
           <div className="flex flex-col gap-[8px]">
@@ -40,14 +48,14 @@ export default function FooterProfil() {
               Download Aplikasi Autodeal
             </h1>
             <div className="flex gap-[6px]">
-              <Link href={"/"}>
+              <Link className="hover:scale-110 active:scale-100" href={"/"}>
                 <Image
                   src={"/icons/playstore-grey.png"}
                   width={103}
                   height={36}
                 />
               </Link>
-              <Link href={"/"}>
+              <Link className="hover:scale-110 active:scale-100" href={"/"}>
                 <Image
                   src={"/icons/appstore-grey.png"}
                   width={103}

@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.Quicksand {
+  font-family: "Quicksand", sans-serif;
+}

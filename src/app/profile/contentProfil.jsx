@@ -17,15 +17,19 @@ export default function ContentProfil({ api }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("");
 
+  function handleKategori() {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <section className="grid lg:w-3/4 lg:gap-[20px] gap-[10px]">
-      <div className="lg:flex lg:w-full lg:justify-between">
+      <div className="Quicksand lg:flex lg:w-full lg:justify-between">
         <div className="hidden lg:flex items-center">
           <form className="">
             <div className=" flex gap-[2px]">
               <div className="form-group">
                 <input
-                  className="bg-white w-[251px] h-[44px] bg-[#F4F5F7] pl-[16px] rounded-l-[8px] text-sm"
+                  className="w-[251px] h-[44px] bg-white pl-[16px] rounded-l-[8px] text-sm"
                   type="text"
                   placeholder="Cari Berdasarkan Judul"
                 />
@@ -67,13 +71,14 @@ export default function ContentProfil({ api }) {
                 </div>
               </button>
               {isOpen && (
-                <div className="font-[600] text-[14px] text-[#333333] absolute flex flex-col rounded bg-white z-10 w-full left-0 top-[42px]">
+                <div
+                  onClick={handleKategori}
+                  className="font-[600] text-[14px] text-[#333333] absolute overflow-hidden flex flex-col rounded bg-white z-10 w-full left-0 top-[42px]">
                   {kategori?.map((value) => (
                     <button
                       key={value.harga}
                       onClick={() => setSelected(value.harga)}
-                      className="hover:rounded px-[20px] active:scale-95 h-[37px] hover:bg-[#d7a901] text-start"
-                      href={"/"}>
+                      className="px-[20px] active:scale-95 h-[37px] hover:bg-[#d7a901] text-start">
                       {value.harga}
                     </button>
                   ))}
@@ -87,7 +92,7 @@ export default function ContentProfil({ api }) {
         {api.map((value, index) => (
           <div
             key={index}
-            className="cursor-pointer hover:scale-105 duration-200 h-auto md:h-auto rounded-[12px] bg-white">
+            className="cursor-pointer active:scale-95 lg:hover:scale-105 lg:active:scale-100 duration-200 h-auto md:h-auto rounded-[12px] bg-white">
             <Content api={value} />
           </div>
         ))}
@@ -114,7 +119,7 @@ function Content({ api }) {
         />
         <button
           onClick={() => setIsOpen((prev) => !prev)}
-          className={`justify-center flex hover:backdrop-blur-xl items-center w-[32px] md:w-[40px] h-[32px] md:h-[40px] rounded-[8px] bg-transparent  backdrop-blur-2xl absolute mt-[106px] md:mt-[194px] end-0 mr-[20px] mb-[12px] md:mb-[16px]`}>
+          className={`hover:scale-110 active:scale-100 justify-center flex hover:backdrop-blur-xl items-center w-[32px] md:w-[40px] h-[32px] md:h-[40px] rounded-[8px] bg-transparent  backdrop-blur-2xl absolute mt-[106px] md:mt-[194px] end-0 mr-[20px] mb-[12px] md:mb-[16px]`}>
           <Favorite
             strokeWidth={0}
             className={`${

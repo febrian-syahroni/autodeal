@@ -45,14 +45,14 @@ export default function SideBarProfil() {
         <div className="flex lg:h-auto lg:hidden justify-end">
           <button onClick={() => setIsOpen((prev) => !prev)}>
             {!isOpen ? (
-              <div className="flex items-center justify-between bg-[#ececec] w-[169px] h-[40px] rounded-[8px] px-[16px] py-[10px]">
+              <div className="flex hover:scale-110 active:scale-100 items-center justify-between bg-[#ececec] w-[169px] h-[40px] rounded-[8px] px-[16px] py-[10px]">
                 <p className="font-[500] text-[12px] text-[#aaaaaa]">
                   Lihat lebih banyak
                 </p>
                 <FaAngleDown className="w-[10px] h-[10px]" />
               </div>
             ) : (
-              <div className="flex items-center justify-between bg-[#ececec] w-[169px] h-[40px] rounded-[8px] px-[16px] py-[10px]">
+              <div className="flex hover:scale-110 active:scale-100 items-center justify-between bg-[#ececec] w-[169px] h-[40px] rounded-[8px] px-[16px] py-[10px]">
                 <p className="font-[500] text-[12px] text-[#aaaaaa]">
                   Lihat lebih sedikit
                 </p>

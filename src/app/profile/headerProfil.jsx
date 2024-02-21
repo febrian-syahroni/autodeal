@@ -4,6 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Bell from "../../../public/svgs/bell";
 import HeartOutline from "../../../public/svgs/heart-outline";
+import {
+  IoNotificationsOffOutline,
+  IoHeartDislikeOutline,
+} from "react-icons/io5";
 import Search from "../../../public/svgs/search";
 import Map from "../../../public/svgs/map";
 import Burger from "../../../public/svgs/burger";
@@ -11,6 +15,22 @@ import RedBall from "../../../public/svgs/redBall";
 
 export default function HeaderProfil() {
   const [isOpen, setIsOpen] = useState(false);
+  const [notif, setNotif] = useState(false);
+  const [favorite, setFavorite] = useState(false);
+  const [profil, setProfil] = useState(false);
+
+  function handleProfil() {
+    setProfil(!profil);
+  }
+
+  function handleFavorite() {
+    setFavorite(!favorite);
+  }
+
+  function handleNotif() {
+    setNotif(!notif);
+  }
+
   return (
     <header className="lg:flex bg-white w-screen">
       <div className="px-[20px] lg:px-0 flex lg:w-[1280px] mx-auto lg:h-[81px] h-[56px] items-center justify-between">
@@ -55,17 +75,57 @@ export default function HeaderProfil() {
           </form>
 
           <div className="flex gap-8 items-center">
-            <button className="bg-orange-200 w-[44px] h-[44px] cursor-pointer rounded-full">
-              A
-            </button>
+            <div className="relative flex">
+              <button
+                onClick={handleProfil}
+                className="hover:scale-110 active:scale-100 bg-orange-200 w-[44px] h-[44px] cursor-pointer rounded-full">
+                A
+              </button>
+              {profil && (
+                <div className="absolute border gap-3 flex flex-col items-center shadow-lg end-0 top-12 bg-white z-20 w-max p-10 rounded">
+                  <div className="hover:scale-110 active:scale-100 bg-orange-200 cursor-pointer rounded-full w-[30px] h-[30px] flex items-center justify-center">
+                    A
+                  </div>
+                  <h1 className="cursor-pointer hover:scale-110 active:scale-100">
+                    Dashboard
+                  </h1>
+                  <h1 className="cursor-pointer hover:scale-110 active:scale-100">
+                    Log Out
+                  </h1>
+                </div>
+              )}
+            </div>
             <span className="h-[24px] border border-[#e5e5e5]"></span>
-            <button>
-              <HeartOutline />
-            </button>
-            <button className="relative">
-              <Bell />
-              <RedBall className="absolute top-[-3px] end-[-3px]" />
-            </button>
+            <div className="relative flex">
+              <button
+                onClick={handleFavorite}
+                className="hover:scale-110 active:scale-100 relative">
+                <HeartOutline />
+              </button>
+              {favorite && (
+                <div className="absolute flex flex-col items-center shadow-lg end-0 top-6 bg-white z-20 w-max p-10 rounded">
+                  <IoHeartDislikeOutline size={50} className="text-gray-500" />
+                  <h1>Tidak ada item favorit</h1>
+                </div>
+              )}
+            </div>
+            <div className="relative flex">
+              <button
+                onClick={handleNotif}
+                className="hover:scale-110 active:scale-100 relative">
+                <Bell />
+                <RedBall className="absolute top-[-3px] end-[-3px]" />
+              </button>
+              {notif && (
+                <div className="absolute flex flex-col items-center shadow-lg end-0 top-6 bg-white z-20 w-max p-10 rounded">
+                  <IoNotificationsOffOutline
+                    size={50}
+                    className="text-gray-500"
+                  />
+                  <h1>Tidak ada notifikasi</h1>
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
