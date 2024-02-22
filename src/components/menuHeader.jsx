@@ -61,7 +61,7 @@ export default function MenuHeader({ onClick, isOpen }) {
       </div>
 
       {/* menu kategori */}
-      <div className="w-full border-b-2 border-[#333333] pb-[30px] flex flex-wrap gap-x-2 gap-y-[20px] justify-center mt-[30px]">
+      <div className="w-full border-b-2 border-[#333333] pb-[30px] flex flex-wrap gap-x-[25px] gap-y-[20px] justify-center mt-[30px]">
         {kategori.map((item, index) => (
           <button
             key={index}
