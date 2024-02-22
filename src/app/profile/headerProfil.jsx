@@ -1,9 +1,5 @@
 "use client";
 
-import Facebook from "../../../public/svgs/facebook";
-import Tiktok from "../../../public/svgs/tiktok";
-import Youtube from "../../../public/svgs/youtube";
-
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,12 +13,17 @@ import Search from "../../../public/svgs/search";
 import Map from "../../../public/svgs/map";
 import Burger from "../../../public/svgs/burger";
 import RedBall from "../../../public/svgs/redBall";
+import MenuHeader from "@/components/menuHeader";
 
 export default function HeaderProfil() {
   const [isOpen, setIsOpen] = useState(false);
   const [notif, setNotif] = useState(false);
   const [favorite, setFavorite] = useState(false);
   const [profil, setProfil] = useState(false);
+
+  function handleMenu() {
+    setIsOpen(!isOpen);
+  }
 
   function handleProfil() {
     setProfil(!profil);
@@ -137,184 +138,11 @@ export default function HeaderProfil() {
         <button
           onClick={() => setIsOpen((prev) => !prev)}
           className="relative lg:hidden rounded-[8px]flex justify-center items-center">
-          {!isOpen ? <Burger /> : <div>X</div>}
+          {!isOpen ? <Burger className="active:scale-75" /> : <div>X</div>}
         </button>
 
         {/* menu header */}
-        {isOpen && (
-          <section className="h-screen start-0 top-0 fixed px-[20px] py-[12px] backdrop-blur-sm bg-[#333333]/80 z-10 w-screen">
-            <button
-              onClick={() => setIsOpen((prev) => !prev)}
-              className="absolute active:scale-75 end-[20px] top-[17px]">
-              <Image src={"/icons/close.png"} width={18} height={18} />
-            </button>
-            <Link
-              href="/"
-              className="flex items-center w-[144.2px] h-[28px] text-white">
-              <div className="">
-                <Image
-                  className=""
-                  src="/images/logo-putih.png"
-                  alt=""
-                  width={500}
-                  height={500}
-                />
-              </div>
-            </Link>
-
-            <div className="w-full h-[75px] mt-[20px] flex items-center px-[20px] gap-[13px] rounded-[8px] bg-[#333333]/80">
-              <Image src={"/icons/profile-bulat.png"} width={50} height={50} />
-              <div className="Quicksand flex flex-col justify-center">
-                <h1 className="text-[14px] leading-[17.5px] text-[#AAAAAA]">
-                  Halo,
-                </h1>
-                <h1 className="text-[16px] leading-[20px] text-[#E6BD40]">
-                  Ayo login ke akunmu
-                </h1>
-              </div>
-            </div>
-
-            <div className="w-full border-b-2 border-[#333333] pb-[36px] flex flex-wrap gap-x-[27px] gap-y-[20px] justify-evenly mt-[30px]">
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-              <button className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-                <div className="grid items-center justify-center bg-[#333333] rounded-full w-[44px] h-[44px]">
-                  <Image src={"/icons/semua.png"} width={24} height={24} />
-                </div>
-                <p>Semua</p>
-              </button>
-            </div>
-
-            <div className="grid mt-[25px] text-[12px] text-[#aaaaaa] h-auto grid-cols-2">
-              <div className="grid gap-[15px] text-center">
-                <button>Tentang kami</button>
-                <button>Syarat & Ketentuan</button>
-              </div>
-              <div className="grid gap-[15px] text-center">
-                <button>Tentang kami</button>
-                <button>Syarat & Ketentuan</button>
-              </div>
-            </div>
-
-            <div className="mt-[24px] justify-center flex gap-[11px]">
-              <Image
-                className="cursor-pointer"
-                src={"/icons/playstore-grey.png"}
-                width={137}
-                height={48}
-              />
-              <Image
-                className="cursor-pointer"
-                src={"/icons/playstore-grey.png"}
-                width={137}
-                height={48}
-              />
-            </div>
-
-            <div className="flex mt-[21px] justify-center gap-[18px]">
-              <Link href={"/"} className="flex justify-center items-center">
-                <Facebook className="" />
-              </Link>
-              <Link href={"/"} className="flex  justify-center items-center">
-                <Image src={"/icons/Instagram.png"} width={20} height={20} />
-              </Link>
-              <Link href={"/"} className=" flex  justify-center items-center">
-                <Youtube />
-              </Link>
-              <Link href={"/"} className=" flex  justify-center items-center">
-                <Tiktok />
-              </Link>
-            </div>
-
-            {/* footer */}
-            <footer className="w-full pt-[10px] border-[#333333] border-t-2 mt-[22px]">
-              <h1 className="flex gap-[5px] justify-center w-full font-[600] text-[12px] text-[#aaaaaa]">
-                Copyright © 2023{""}
-                <Link
-                  href={"/"}
-                  className="font-[500] text-[12px] text-[#d7a901]">
-                  autodeal
-                </Link>
-              </h1>
-            </footer>
-          </section>
-        )}
+        {isOpen && <MenuHeader isOpen={isOpen} onClick={handleMenu} />}
       </div>
     </header>
   );

@@ -3,7 +3,6 @@ import ContentProfil from "./contentProfil";
 import SideBarProfil from "./sideBarProfil";
 import FooterProfil from "./footerProfil";
 import Endpoint from "./endpoint";
-import { getAllData } from "@/libs/api-libs";
 import data from "@/app/profile/cars.json";
 
 import Category from "@/components/Category";

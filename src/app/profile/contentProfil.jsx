@@ -119,7 +119,7 @@ function Content({ api }) {
         />
         <button
           onClick={() => setIsOpen((prev) => !prev)}
-          className={`hover:scale-110 active:scale-100 justify-center flex hover:backdrop-blur-xl items-center w-[32px] md:w-[40px] h-[32px] md:h-[40px] rounded-[8px] bg-transparent  backdrop-blur-2xl absolute mt-[106px] md:mt-[194px] end-0 mr-[20px] mb-[12px] md:mb-[16px]`}>
+          className={`active:scale-90 justify-center flex bg-white/60 backdrop-blur-sm items-center w-[32px] md:w-[40px] h-[32px] md:h-[40px] rounded-[8px] absolute mt-[106px] md:mt-[194px] end-0 mr-[20px] mb-[12px] md:mb-[16px]`}>
           <Favorite
             strokeWidth={0}
             className={`${
