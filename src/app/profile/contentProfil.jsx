@@ -147,15 +147,12 @@ function Content({ api }) {
         </p>
         <div className="md:gap-1 flex justify-between items-center font-[500] text-[10px] md:text-[12px] text-[#aaaaaa] mt-[11px] md:mt-[16px]">
           <div className="flex gap-[6px] justify-between items-center">
-            <div className="flex w-[10px] h-[10px] md:w-[16px] md:h-[16px]">
-              <Image
-                className=""
-                src={"/icons/map.png"}
-                width={16}
-                height={16}
-              />
+            <div className="flex w-[12px] h-[12px] md:w-[16px] md:h-[16px]">
+              <Image src={"/icons/map.png"} width={50} height={50} />
             </div>
-            <span className="">Jakarta Barat, kalideres</span>
+            <span className="text-[10px] font-[500]">
+              Jakarta Barat, kalideres
+            </span>
           </div>
           <div className="hidden gap-[6px] md:flex md:items-center md:text-center">
             <Calendar className="" />

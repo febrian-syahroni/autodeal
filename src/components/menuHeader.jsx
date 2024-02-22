@@ -26,28 +26,30 @@ export default function MenuHeader({ onClick, isOpen }) {
     <section
       className={
         isOpen
-          ? "Quicksand !inset-y-0 w-full !transition-all !duration-1000 start-0 !top-0 fixed px-[20px] py-[12px] backdrop-blur-sm bg-[#333333]/80 z-10"
-          : "Quicksand !inset-y-0 w-full !transition-all !duration-1000 start-0 !-top-full fixed px-[20px] py-[12px] backdrop-blur-sm bg-[#333333]/80 z-10"
+          ? "Quicksand w-screen overflow-auto h-screen !inset-y-0 !transition-all !duration-300 start-0 !top-0 fixed px-[20px] py-[12px] backdrop-blur-sm bg-[#333333]/80 z-10"
+          : "Quicksand h-screen !inset-y-0 w-full !transition-all !duration-300 start-0 !-top-full fixed px-[20px] py-[12px] backdrop-blur-sm bg-[#333333]/80 z-10"
       }>
-      <button
-        onClick={onClick}
-        className="absolute active:scale-75 end-[20px] top-[17px]">
-        <Image src={"/icons/close.png"} width={18} height={18} />
-      </button>
-      <Link
-        href="/"
-        className="flex items-center w-[144.2px] h-[28px] text-white">
-        <div className="">
-          <Image
-            className=""
-            src="/images/logo-putih.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-        </div>
-      </Link>
+      {/* header */}
+      <div className="flex justify-between">
+        <Link
+          href="/"
+          className="flex items-center w-[144.2px] h-[28px] text-white">
+          <div className="">
+            <Image
+              className=""
+              src="/images/logo-putih.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+          </div>
+        </Link>
+        <button onClick={onClick} className="active:scale-75 end-0 top-0">
+          <Image src={"/icons/close.png"} width={18} height={18} />
+        </button>
+      </div>
 
+      {/* foto profil */}
       <div className="w-full h-[75px] mt-[20px] flex items-center px-[20px] gap-[13px] rounded-[8px] bg-[#333333]/80">
         <Image src={"/icons/profile-bulat.png"} width={50} height={50} />
         <div className="flex flex-col justify-center">
@@ -58,7 +60,8 @@ export default function MenuHeader({ onClick, isOpen }) {
         </div>
       </div>
 
-      <div className="w-full border-b-2 border-[#333333] pb-[36px] flex flex-wrap gap-x-[27px] gap-y-[20px] justify-center mt-[30px]">
+      {/* menu kategori */}
+      <div className="w-full border-b-2 border-[#333333] pb-[30px] flex flex-wrap gap-x-2 gap-y-[20px] justify-center mt-[30px]">
         {kategori.map((item, index) => (
           <button
             key={index}
@@ -113,7 +116,7 @@ export default function MenuHeader({ onClick, isOpen }) {
       </div>
 
       {/* footer */}
-      <footer className="flex items-center w-full mb-[160px] pt-[10px] border-[#333333] border-t-2 mt-[22px]">
+      <footer className="flex items-center w-full pb-[160px] pt-[10px] border-[#333333] border-t-2 mt-[22px]">
         <h1 className="flex gap-[5px] justify-center w-full font-[600] text-[10px] text-[#aaaaaa]">
           Copyright © 2023{""}
           <Link href={"/"} className="font-[500] text-[10px] text-[#d7a901]">
