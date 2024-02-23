@@ -41,7 +41,7 @@ export default function SideBarProfil() {
           <DetailProfil />
         </div>
         {isOpen && <DetailProfil />}
-        <div className="w-full lg:hidden h-[1px] border border-[1px] border-[#e5e5e5]"></div>
+        <div className="w-full lg:hidden h-[1px] border-[1px] border-[#e5e5e5]"></div>
         <div className="flex lg:h-auto lg:hidden justify-end">
           <button onClick={() => setIsOpen((prev) => !prev)}>
             {!isOpen ? (
@@ -76,7 +76,7 @@ function DetailProfil() {
           menghilang
         </p>
       </div>
-      <div className="w-full h-[1px] border border-[1px] border-[#e5e5e5]"></div>
+      <div className="w-full h-[1px] border-[1px] border-[#e5e5e5]"></div>
       <div className="grid gap-[20px]">
         <p className="font-[500] text-[12px] text-[#aaaaaa]">KONTAK</p>
         <div className="flex items-center gap-[10px]">
@@ -112,7 +112,7 @@ function DetailProfil() {
           </Link>
         </div>
       </div>
-      <div className="w-full h-[1px] border border-[1px] border-[#e5e5e5]"></div>
+      <div className="w-full h-[1px] border-[1px] border-[#e5e5e5]"></div>
       <div className="grid gap-[20px]">
         <h1 className="font-[500] text-[12px] text-[#aaaaaa]">ALAMAT</h1>
         <p className="font-[500] text-[14px]">

@@ -26,8 +26,8 @@ export default function MenuHeader({ onClick, isOpen }) {
     <section
       className={
         isOpen
-          ? "Quicksand w-screen overflow-auto h-screen !inset-y-0 !transition-all !duration-300 start-0 !top-0 fixed px-[20px] py-[12px] backdrop-blur-sm bg-[#333333]/80 z-10"
-          : "Quicksand h-screen !inset-y-0 w-full !transition-all !duration-300 start-0 !-top-full fixed px-[20px] py-[12px] backdrop-blur-sm bg-[#333333]/80 z-10"
+          ? "Quicksand !transition-all container !duration-500 start-0 fixed px-[20px] top-0 py-[12px] backdrop-blur-sm bg-[#333333]/80 z-10"
+          : "Quicksand !transition-all container !duration-500 start-0 fixed px-[20px] -top-[1200px] py-[12px] backdrop-blur-sm bg-[#333333]/80 z-10"
       }>
       {/* header */}
       <div className="flex justify-between">
@@ -60,6 +60,21 @@ export default function MenuHeader({ onClick, isOpen }) {
         </div>
       </div>
 
+<<<<<<< HEAD
+      <div className="overflow-auto h-screen">
+        {/* menu kategori */}
+        <div className="w-full border-b-2 border-[#333333] pb-[30px] flex flex-wrap gap-x-2 gap-y-[20px] justify-center mt-[30px]">
+          {kategori.map((item, index) => (
+            <button
+              key={index}
+              className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
+              <div className="grid items-center justify-center bg-[#333333] hover:bg-[#333333]/50 active:scale-90 rounded-full w-[44px] h-[44px]">
+                <Image src={item.img} width={24} height={24} />
+              </div>
+              <p className="text-[10px] font-[600]">{item.title}</p>
+            </button>
+          ))}
+=======
       {/* menu kategori */}
       <div className="w-full border-b-2 border-[#333333] pb-[30px] flex flex-wrap gap-x-[25px] gap-y-[20px] justify-center mt-[30px]">
         {kategori.map((item, index) => (
@@ -78,52 +93,60 @@ export default function MenuHeader({ onClick, isOpen }) {
         <div className="grid gap-[15px] text-center">
           <button>Tentang kami</button>
           <button>Syarat & Ketentuan</button>
+>>>>>>> aae4670b3e170dbfd9914f813894803180054a55
         </div>
-        <div className="grid gap-[15px] text-center">
-          <button>Pusat bantuan</button>
-          <button>Kebijakan Privasi</button>
+
+        <div className="text-[12px] grid mt-[25px] font-[600] text-[#aaaaaa] h-auto grid-cols-2">
+          <div className="grid gap-[15px] text-center">
+            <button>Tentang kami</button>
+            <button>Syarat & Ketentuan</button>
+          </div>
+          <div className="grid gap-[15px] text-center">
+            <button>Pusat bantuan</button>
+            <button>Kebijakan Privasi</button>
+          </div>
         </div>
-      </div>
 
-      <div className="mt-[24px] justify-center flex gap-[11px]">
-        <Image
-          className="active:scale-90 cursor-pointer"
-          src={"/icons/playstore-grey.png"}
-          width={137}
-          height={48}
-        />
-        <Image
-          className="active:scale-90 cursor-pointer"
-          src={"/icons/playstore-grey.png"}
-          width={137}
-          height={48}
-        />
-      </div>
+        <div className="mt-[24px] justify-center flex gap-[11px]">
+          <Image
+            className="active:scale-90 cursor-pointer"
+            src={"/icons/playstore-grey.png"}
+            width={137}
+            height={48}
+          />
+          <Image
+            className="active:scale-90 cursor-pointer"
+            src={"/icons/playstore-grey.png"}
+            width={137}
+            height={48}
+          />
+        </div>
 
-      <div className="flex mt-[21px] justify-center gap-[18px]">
-        <Link href={"/"} className="flex justify-center items-center">
-          <Facebook className="" />
-        </Link>
-        <Link href={"/"} className="flex  justify-center items-center">
-          <Image src={"/icons/Instagram.png"} width={20} height={20} />
-        </Link>
-        <Link href={"/"} className=" flex  justify-center items-center">
-          <Youtube />
-        </Link>
-        <Link href={"/"} className=" flex  justify-center items-center">
-          <Tiktok />
-        </Link>
-      </div>
-
-      {/* footer */}
-      <footer className="flex items-center w-full pb-[160px] pt-[10px] border-[#333333] border-t-2 mt-[22px]">
-        <h1 className="flex gap-[5px] justify-center w-full font-[600] text-[10px] text-[#aaaaaa]">
-          Copyright © 2023{""}
-          <Link href={"/"} className="font-[500] text-[10px] text-[#d7a901]">
-            autodeal
+        <div className="flex mt-[21px] justify-center gap-[18px]">
+          <Link href={"/"} className="flex justify-center items-center">
+            <Facebook className="" />
           </Link>
-        </h1>
-      </footer>
+          <Link href={"/"} className="flex  justify-center items-center">
+            <Image src={"/icons/Instagram.png"} width={20} height={20} />
+          </Link>
+          <Link href={"/"} className=" flex  justify-center items-center">
+            <Youtube />
+          </Link>
+          <Link href={"/"} className=" flex  justify-center items-center">
+            <Tiktok />
+          </Link>
+        </div>
+
+        {/* footer */}
+        <footer className="flex items-center w-full pb-[160px] pt-[10px] border-[#333333] border-t-2 mt-[22px]">
+          <h1 className="flex gap-[5px] justify-center w-full font-[600] text-[10px] text-[#aaaaaa]">
+            Copyright © 2023{""}
+            <Link href={"/"} className="font-[500] text-[10px] text-[#d7a901]">
+              autodeal
+            </Link>
+          </h1>
+        </footer>
+      </div>
     </section>
   );
 }

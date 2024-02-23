@@ -12,10 +12,12 @@ export default async function Page() {
 
   return (
     <div className="overflow-x-hidden background bg-[#F4F5F7]">
-      <HeaderProfil />
-      <Category />
-      <Endpoint />
-      <div className="mb-[103px] px-[20px] lg:px-0 lg:gap-[20px] lg:flex lg:mx-auto grid gap-[10px] lg:max-w-[1280px]">
+      <div className="fixed shadow-sm flex-col z-10">
+        <HeaderProfil className="z-10" />
+        <Category />
+        <Endpoint className="bg-[#F4F5F7]" />
+      </div>
+      <div className="mt-[88px] md:mt-[150px] lg:mt-[192px] mb-[103px] px-[20px] lg:px-0 lg:gap-[20px] lg:flex lg:mx-auto grid gap-[10px] lg:max-w-[1280px]">
         <SideBarProfil />
         <ContentProfil api={products} />
       </div>

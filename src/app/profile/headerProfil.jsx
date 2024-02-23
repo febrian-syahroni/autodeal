@@ -15,7 +15,7 @@ import Burger from "../../../public/svgs/burger";
 import RedBall from "../../../public/svgs/redBall";
 import MenuHeader from "@/components/menuHeader";
 
-export default function HeaderProfil() {
+export default function HeaderProfil({ className }) {
   const [isOpen, setIsOpen] = useState(false);
   const [notif, setNotif] = useState(false);
   const [favorite, setFavorite] = useState(false);
@@ -38,8 +38,8 @@ export default function HeaderProfil() {
   }
 
   return (
-    <header className="lg:flex bg-white w-screen">
-      <div className="px-[20px] lg:px-0 flex lg:w-[1280px] mx-auto lg:h-[81px] h-[56px] items-center justify-between">
+    <header className={`${className} lg:flex bg-white w-screen`}>
+      <div className=" bg-white shadow-md md:shadow-none z-10 inset-x-0 px-[20px] lg:px-0 flex lg:w-[1280px] mx-auto lg:h-[81px] h-[56px] items-center justify-between">
         <div className="">
           <Link href="/" className="grid items-center">
             <Image
@@ -136,14 +136,14 @@ export default function HeaderProfil() {
         </section>
 
         <button
-          onClick={() => setIsOpen((prev) => !prev)}
+          onClick={handleMenu}
           className="relative lg:hidden rounded-[8px]flex justify-center items-center">
-          {!isOpen ? <Burger className="active:scale-75" /> : <div>X</div>}
+          <Burger className="active:scale-75" />
         </button>
-
-        {/* menu header */}
-        {isOpen && <MenuHeader isOpen={isOpen} onClick={handleMenu} />}
       </div>
+
+      {/* menu header */}
+      <MenuHeader isOpen={isOpen} onClick={handleMenu} />
     </header>
   );
 }

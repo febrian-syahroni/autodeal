@@ -54,7 +54,7 @@ export default function Category() {
           {categoryItems.map((item, index) => (
             <SwiperSlide
               key={index}
-              className="!w-fit hover:bg-[#282828]/50 active:scale-95 overflow-hidden cursor-pointer !flex items-center justify-center gap-[12px] rounded-lg bg-[#282828] px-[20px] !py-[1px] text-[14px] text-white">
+              className="!w-fit hover:bg-[#282828]/50 active:scale-95 overflow-hidden cursor-pointer !flex items-center justify-center gap-[12px] rounded-lg bg-[#282828] px-[20px] !py-[10px] text-[14px] text-white">
               <Image src={item.scr} alt={item.alt} width={20} height={20} />
               <h5 className="text-xs capitalize lg:text-sm">{item.alt}</h5>
             </SwiperSlide>
