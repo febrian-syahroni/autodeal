@@ -60,7 +60,6 @@ export default function MenuHeader({ onClick, isOpen }) {
         </div>
       </div>
 
-<<<<<<< HEAD
       <div className="overflow-auto h-screen">
         {/* menu kategori */}
         <div className="w-full border-b-2 border-[#333333] pb-[30px] flex flex-wrap gap-x-2 gap-y-[20px] justify-center mt-[30px]">
@@ -74,26 +73,6 @@ export default function MenuHeader({ onClick, isOpen }) {
               <p className="text-[10px] font-[600]">{item.title}</p>
             </button>
           ))}
-=======
-      {/* menu kategori */}
-      <div className="w-full border-b-2 border-[#333333] pb-[30px] flex flex-wrap gap-x-[25px] gap-y-[20px] justify-center mt-[30px]">
-        {kategori.map((item, index) => (
-          <button
-            key={index}
-            className="flex flex-col text-[10px] justify-between items-center text-[#aaaaaa] w-[44px] h-[68px]">
-            <div className="grid items-center justify-center bg-[#333333] hover:bg-[#333333]/50 active:scale-90 rounded-full w-[44px] h-[44px]">
-              <Image src={item.img} width={24} height={24} />
-            </div>
-            <p className="text-[10px] font-[600]">{item.title}</p>
-          </button>
-        ))}
-      </div>
-
-      <div className="text-[12px] grid mt-[25px] font-[600] text-[#aaaaaa] h-auto grid-cols-2">
-        <div className="grid gap-[15px] text-center">
-          <button>Tentang kami</button>
-          <button>Syarat & Ketentuan</button>
->>>>>>> aae4670b3e170dbfd9914f813894803180054a55
         </div>
 
         <div className="text-[12px] grid mt-[25px] font-[600] text-[#aaaaaa] h-auto grid-cols-2">
